@@ -3,6 +3,10 @@ html {
   font-size: 18px;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: #000;
   color: rgb(255, 255, 255);
@@ -21,7 +25,7 @@ h2 {
   font-weight: 100;
 }
 
-nav ul li {
+nav ul li a {
   display: inline-block;
   margin: 10px 20px; 
   color: #1099FF;
@@ -29,14 +33,15 @@ nav ul li {
   padding: 10px;
   border-radius: 5px;
   transition: background-color .5s, color .5s;
-/*  background-color: yellow;
-  padding: 5px;
-  border: 10px solid black;*/
 }
 
-nav ul li:hover {
+nav ul li a:hover {
   background-color: #1099FF;
   color: white;
+}
+
+nav ul li {
+  display: inline-block;
 }
 
 nav ul {
@@ -47,10 +52,14 @@ nav ul {
 
 nav {
   background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .banner {
   width: 100%;
+  margin-top: 60px;
 }
 
 .container {
@@ -66,5 +75,25 @@ nav {
 .movie img {
   width: 100%;
 }
+
+.movie-table {
+  border: 1px solid white;
+  width: 60%;
+  margin: 100px auto 0 auto;
+}
+
+.movie-table tr th, .movie-table tr td {
+  padding: 20px;
+  border: 1px solid white;
+}
+
+.column1 {
+  width: 200px;
+}
+
+
+
+
+
 
 
