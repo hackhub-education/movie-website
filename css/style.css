@@ -91,9 +91,30 @@ nav {
   width: 200px;
 }
 
+.circle-img {
+  margin-top: 200px;
+  border-radius: 50%;
+}
 
+.about-image {
+  text-align: center;
+}
 
+@media(max-width: 1024px) {
+  
+} 
 
+@media(max-width: 412px) {
+
+  nav ul a {
+    margin: 10px 8px;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+}
 
 
 
