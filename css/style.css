@@ -1,5 +1,5 @@
 html {
-  font-family: Helvetica, Arial;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
 }
 
@@ -98,6 +98,16 @@ nav {
 
 .about-image {
   text-align: center;
+}
+
+.center-icon {
+  text-align: center;
+}
+
+.ticket-btn {
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 @media(max-width: 1024px) {
