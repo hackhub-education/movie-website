@@ -2,8 +2,8 @@
 <head>
   <title>New Movies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-
+  
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,300italic,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -17,25 +17,132 @@
     </ul>
   </nav>
 
-  <img class="banner" src="img/dark-knight-rises-movie-poster-banner-batman.jpg">
+  <div class="banner">
+    <!-- start of carousel -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="img/s-l1000.jpg">
+          <div class="carousel-caption">
+            <h1>Start Wars</h1>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/inception_movie_poster_banner_01.jpg">
+          <div class="carousel-caption">
+            <h1>Inception</h1>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/dark-knight-rises-movie-poster-banner-batman.jpg">
+          <div class="carousel-caption">
+            <h1>Batman</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- end of carousel -->
+  </div> 
+  <!-- end of banner -->
 
   <h1>Upcoming Movies</h1>
 
   <div class="container">
     
-  <div class="movie">
+  <div class="movie" data-toggle="modal" data-target="#avengers">
     <img src="img/avengers-movie-poster-1.jpg">
     <h2><i class="fa fa-film"></i> Avengers</h2>
   </div>
 
-  <div class="movie">
+  <!-- Modal -->
+  <div class="modal fade" id="avengers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Avengers</h4>
+        </div>
+        <div class="modal-body">
+          <img src="img/avengers-movie-poster-1.jpg">
+          <p>When Thor's evil brother, Loki (Tom Hiddleston), gains access to the unlimited power of the energy cube called the Tesseract, Nick Fury (Samuel L. Jackson), director of S.H.I.E.L.D., initiates a superhero recruitment effort to defeat the unprecedented threat to Earth. Joining Fury's "dream team" are Iron Man (Robert Downey Jr.), Captain America (Chris Evans), the Hulk (Mark Ruffalo), Thor (Chris Hemsworth), the Black Widow (Scarlett Johansson) and Hawkeye (Jeremy Renner).
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Ticket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="movie" data-toggle="modal" data-target="#star-wars">
     <img src="img/Star-Wars-The-Force-Awakens-Movie-Poster.jpg">
     <h2><i class="fa fa-film"></i> Star Wars</h2>
   </div>
 
-  <div class="movie">
+  <!-- Modal -->
+  <div class="modal fade" id="star-wars" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Start Wars</h4>
+        </div>
+        <div class="modal-body">
+          <img src="img/Star-Wars-The-Force-Awakens-Movie-Poster.jpg">
+          <p>Star Wars is an American epic space opera franchise, centered on a film series created by George Lucas. It depicts the adventures of various characters "a long time ago in a galaxy far, far away".
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Ticket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="movie"  data-toggle="modal" data-target="#titanic">
     <img src="img/titanic-movie-poster-1997-1020339699.jpg">
     <h2><i class="fa fa-film"></i> Titanic</h2>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="titanic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Titanic</h4>
+        </div>
+        <div class="modal-body">
+          <img src="img/titanic-movie-poster-1997-1020339699.jpg">
+          <p>James Cameron's "Titanic" is an epic, action-packed romance set against the ill-fated maiden voyage of the R.M.S. Titanic; the pride and joy of the White Star Line and, at the time, the largest moving object ever built. She was the most luxurious liner of her era -- the "ship of dreams" -- which ultimately carried over 1,500 people to their death in the ice cold waters of the North Atlantic in the early hours of April 15, 1912.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Buy Ticket</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   </div>
@@ -63,6 +170,8 @@
     </ul>
     <li><h2>Triple 9</h2></li>
   </ul> -->
+  <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 
 </html>

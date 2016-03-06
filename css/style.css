@@ -55,6 +55,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .banner {
@@ -112,6 +113,27 @@ nav {
 
 .alert-btn {
   background-color: red;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.modal {
+  color: black;
+}
+
+.modal img {
+  width: 100%;
+}
+
+.movie {
+  cursor: pointer;
+  opacity: .9;
+}
+
+.movie:hover {
+  opacity: 1;
 }
 
 @media(max-width: 1024px) {
