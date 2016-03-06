@@ -110,6 +110,10 @@ nav {
   padding: 10px;
 }
 
+.alert-btn {
+  background-color: red;
+}
+
 @media(max-width: 1024px) {
   
 } 
