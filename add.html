@@ -1,0 +1,47 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Movie</title>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,300italic,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="movies.html">Movie List</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+  <table class="movie-table">
+      <tr>
+        <th class="column1">Name</th>
+        <th>Release Date</th>
+        <th>Director</th>
+        <th>Buy Ticket</th>
+        <th>Remove</th>
+      </tr>
+  </table>
+  <div class="form-inline container text-center">
+    <div class="form-group">
+      <input type="text" class="form-control" id="name" placeholder="Movie Name">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="date" placeholder="Release Date">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="director" placeholder="Director">
+    </div>
+    <div class="form-group">
+      <input type="number" class="form-control" id="ticket" placeholder="Ticket Left">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg" id="add-movie">Add Movie</button>
+  </div>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="js/movie.js"></script>
+</body>
+</html>
