@@ -1,4 +1,4 @@
-html {
+html, body {
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
 }
@@ -112,6 +112,18 @@ nav {
 
 .alert-btn {
   background-color: red;
+}
+
+#add-movie {
+  margin-top: 2rem;
+}
+
+.remove-movie {
+  cursor: pointer;
+}
+
+.btn-manage {
+  margin-top: 2rem;
 }
 
 @media(max-width: 1024px) {
