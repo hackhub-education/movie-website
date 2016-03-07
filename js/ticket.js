@@ -25,11 +25,41 @@ $('.ticket-btn').click(function() {
 
 $('#add-movie').click(function() {
   console.log("Add movie button is clicked");
-  var name = "Avengers";
-  var director = "Joss Whedon";
-  var date = "Feb. 15, 2016";
-  var ticket = 100;
-  movieDataRef.push({ name: name, director: director, release_date: date, ticket: ticket});
+  var name = $('#movie-name').val();
+  var director = $('#director').val();
+  var date = $('#release-date').val();
+  var ticket = $('#ticket').val();
+
+  if (name !== "" && director !== "" && date !== "" && ticket !== "") {
+    movieDataRef.push({ name: name, director: director, release_date: date, ticket: ticket});
+  } else {
+    alert('Please complete this form!');
+  }
+});
+
+movieDataRef.on('child_added', function(snapshot) {
+   var name = snapshot.val().name;
+   var director = snapshot.val().director;
+   var date = snapshot.val().release_date;
+   var ticket = snapshot.val().ticket;
+   var movieRow = $("<tr>").appendTo('.movie-table');
+   $("<td>").addClass('column1').html(name).appendTo(movieRow);
+   $("<td>").html(date).appendTo(movieRow);
+   $("<td>").html(director).appendTo(movieRow);
+   var buyTicket = $("<td>").addClass('center-icon').appendTo(movieRow);
+   $("<button>").addClass('ticket-btn').html('<i class="fa fa-ticket fa-2x"></i><span>' +  ticket + '</span> Left').appendTo(buyTicket);
 });
 
 
+/*
+<tr>
+  <td class="column1">Deadpool</td>
+  <td>February 12, 2016</td>
+  <td>Tim Miller</td>
+  <td class="center-icon">
+  <button class="ticket-btn">
+  <i class="fa fa-ticket fa-2x"></i><span id="deadpool">10</span> Left
+  </button>
+  </td>
+</tr>
+*/
